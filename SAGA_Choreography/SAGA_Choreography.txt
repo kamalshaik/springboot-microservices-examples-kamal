@@ -1,0 +1,56 @@
+Inventory: 
+	topic : new-payments
+		group : payments-group
+	topic: new-inventory
+	topic: reversed-payments	
+	topic : reversed-inventory
+		group : inventory-group
+	topic: reversed-payments
+Order: 
+	topic: new-orders
+	topic: reversed-orders
+		group : orders-group
+Payments: 
+	topic: new-orders
+		group : orders-group
+	topic: new-payments
+	topic: reversed-orders	
+	topic: reversed-payments
+		group : payments-group	
+	topic: reversed-orders
+shipment:	
+	topic:new-inventory
+		group : inventory-group
+	topic: reversed-inventory
+
+unique topics:
+		new-payments, --> payments-group
+		new-inventory, -->  inventory-group
+		reversed-payments, -->  payments-group	
+		reversed-inventory, -->  inventory-group
+		new-orders, -->  orders-group
+		reversed-orders --> orders-group
+	
+---------------------------------------
+1st terminal:
+	.\bin\windows\zookeeper-server-start.bat .\etc\kafka\zookeeper.properties
+---------------------------------------
+2nd terminal:
+	.\bin\windows\kafka-server-start.bat .\etc\kafka\server.properties
+---------------------------------------
+3rd terminal:
+
+.\bin\windows\kafka-topics.bat --create --topic new-payments --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092    
+.\bin\windows\kafka-topics.bat --create --topic new-inventory --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092  
+.\bin\windows\kafka-topics.bat --create --topic reversed-payments --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092  
+.\bin\windows\kafka-topics.bat --create --topic reversed-inventory --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092  
+.\bin\windows\kafka-topics.bat --create --topic new-orders --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092  
+.\bin\windows\kafka-topics.bat --create --topic reversed-orders --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092  
+---------------------------------------
+
+
+
+
+
+
+	

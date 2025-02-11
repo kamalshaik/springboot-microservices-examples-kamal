@@ -1,0 +1,19 @@
+#spring.application.name=PhotoAppUserService
+#server.port=0
+#eureka.client.serviceUrl.defaultZone=http://localhost:9000/eureka
+#spring.devtools.restart.enabled=true
+server: 
+  port: 9002
+
+spring: 
+  application: 
+    name: user-app
+  devtools: 
+    restart: 
+      enabled: true
+
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://localhost:9000/eureka
+

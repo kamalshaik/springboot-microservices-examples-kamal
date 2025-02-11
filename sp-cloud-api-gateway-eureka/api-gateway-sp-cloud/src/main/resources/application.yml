@@ -1,0 +1,34 @@
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://localhost:9000/eureka
+      
+server:
+  port: 9050
+
+spring: 
+  application: 
+    name: api-gateway-sp-cloud
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+ 
+      routes:
+        - id: MGT-APP
+          uri: http://localhost:9001
+          predicates:
+            - Path=/mmt/**
+        - id: USER-APP
+          uri: http://localhost:9002
+          predicates:
+            - Path=/users/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
