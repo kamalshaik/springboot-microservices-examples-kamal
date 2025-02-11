@@ -1,0 +1,1 @@
+In side "PhotoAppUserService" we have latest Swagger implementation also.
