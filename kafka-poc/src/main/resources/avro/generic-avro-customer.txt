@@ -1,0 +1,15 @@
+{
+     "type": "record",
+     "namespace": "com.skh.kafka.standalone.avro.model",
+     "name": "Employee",
+     "fields": [
+       { "name": "emp_first_name", "type": ["null", "string"], "default": null, "doc": "First Name of Customer" },
+       { "name": "emp_middle_name", "type": ["null", "string"], "default": null, "doc": "Last Name of Customer" },
+       { "name": "emp_age", "type": "int", "doc": "Age at the time of registration" },
+	   { "name": "emp_last_name", "type": ["null", "string"], "default": null,"doc": "Last Name of Customer" },
+	   { "name": "emp_test", "type": ["null", "string"], "default": null,"doc": "testField" },
+       { "name": "emp_height", "type": "float", "doc": "Height at the time of registration in cm" },
+       { "name": "emp_weight", "type": "float", "doc": "Weight at the time of registration in kg" },
+       { "name": "emp_automated_email", "type": "boolean", "default": true, "doc": "Field indicating if the user is enrolled in marketing emails" }
+     ]
+}

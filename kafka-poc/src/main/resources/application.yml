@@ -1,0 +1,57 @@
+server: 
+  port: 4000
+
+
+#logging:
+#  file:
+#    name: ./logs/kafka.log
+logging:
+  level: 
+#    org.springframework: DEBUG
+    "*": DEBUG
+#    root: DEBUG
+  file.name: ./logs/application-debug.log
+  pattern:
+#    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+
+topicName: test1
+
+# .\bin\windows\kafka-topics.bat --create --topic test --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+
+spring: 
+  kafka: 
+    producer: 
+      bootstrap-servers: localhost:9092
+      batch-size: 1000000
+      linger.ms: 100000
+        
+# bootstrap server means kafka broker server.
+     
+#spring.kafka.producer.key-serializer = org.apache.kafka.common.serialization.StringSerializer
+#spring.kafka.producer.value-serializer = org.apache.kafka.common.serialization.StringSerializer
+
+
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#the concept of representing an object's state as a byte stream. 
+    consumer: 
+      bootstrap-servers: localhost:9092
+      group-id:  group_id
+      auto-offset-reset: earliest
+
+#spring.kafka.consumer.key-deserializer= org.apache.kafka.common.serialization.StringDeserializer
+#spring.kafka.consumer.value-deserializer = org.apache.kafka.common.serialization.StringDeserializer
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties: 
+        spring: 
+          json: 
+            trusted: 
+              packages: "*"
+#              packages: com.skh, com.skh.dto, com.skh.entity
+#   JsonDeserializer Doesn't TRUST all POJO class objects, it will throw TrustedException, 
+#   so we configured above
+           
+              
+
