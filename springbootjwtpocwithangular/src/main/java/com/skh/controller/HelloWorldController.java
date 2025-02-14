@@ -62,11 +62,9 @@ public class HelloWorldController {
 		return "Empty String.....";
 	}
 	
-	
-	
-	
-
 }
+
+
 
 /**
  * For executing this we need to send either get / post request but we need to
