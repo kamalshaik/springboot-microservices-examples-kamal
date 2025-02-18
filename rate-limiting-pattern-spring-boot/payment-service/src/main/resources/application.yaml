@@ -1,3 +1,5 @@
+#https://medium.com/@truongbui95/microservice-patterns-rate-limiting-with-spring-boot-7e2a068e1b8b#:~:text=Think%20of%20them%20as%20traffic,the%20excess%20calls%20are%20blocked.
+
 server:
   port: 9001
 spring:
