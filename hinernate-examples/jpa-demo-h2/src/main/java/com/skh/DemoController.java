@@ -13,25 +13,28 @@ import com.skh.O2M.Employee;
 
 @RestController
 public class DemoController {
-	
+
 	@Autowired
 	private EmployeeRepository employeeRepository;
-	
-	@GetMapping("/") 
+
+	@GetMapping("/")
 	public void saveEmployee() {
-		
-		Employee employee = new Employee(1, "emp1", new Date(), 12d, true,null);
-		
+
+		this.oneToMany_ManyToOne_bi_directional();
+
+	}
+
+	private void oneToMany_ManyToOne_bi_directional() {
+		Employee employee = new Employee(1, "emp1", new Date(), 12d, true, null);
+
 		Address add1 = new Address("12", "brdndvn1", "5A1", "Hyd1", "5023071", employee);
-		
+
 		List<Address> addressList = Arrays.asList(add1);
-		
+
 		employee.setAddressList(addressList);
-				
-			 
-		
+
 		employeeRepository.save(employee);
-		
+
 	}
 
 }

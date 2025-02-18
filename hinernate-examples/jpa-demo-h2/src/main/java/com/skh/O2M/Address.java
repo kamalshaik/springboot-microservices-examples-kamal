@@ -20,7 +20,7 @@ public class Address {
 	private String pinNumber;
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "fk_employee_address")
+	@JoinColumn(name = "fk_any_name")
 	private Employee employee_O2M;
 	
 	
