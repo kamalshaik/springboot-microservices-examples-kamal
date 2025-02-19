@@ -28,7 +28,7 @@ Swagger:
 ------------------------------------------------------------------------------------------------------------
 Service internal details:
 
->EurekaServerPhotoAppDiscoveryService:  		
+>**EurekaServerPhotoAppDiscoveryService: **   		
 	- @EnableEurekaServer  
 	- application.yml:  
 		- server:   
