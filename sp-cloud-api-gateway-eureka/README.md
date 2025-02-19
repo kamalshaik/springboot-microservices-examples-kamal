@@ -22,9 +22,24 @@ Points:
 - Please read more and understand api-gateway-sp-cloud application.yml file as it is having more gateway configurations.
 ------------------------------------------------------------------------------------------------------------
 Swagger: 
-	In side "PhotoAppUserService [9002]" we have latest Swagger implementation also.
-	We can access Swagger using below URL:
-		http://localhost:9002/swagger-ui.html
+- In side "PhotoAppUserService [9002]" we have latest Swagger implementation also.
+- We can access Swagger using below URL: http://localhost:9002/swagger-ui.html
 	
 ------------------------------------------------------------------------------------------------------------
-		
+Service internal details:
+>EurekaServerPhotoAppDiscoveryService:		
+	- @EnableEurekaServer
+	- application.yml:
+		- server: 
+			  port: 9000
+			spring: 
+			  application: 
+				name: discoveryservice
+			eureka: 
+			  instance: 
+				hostname: localhost
+			  client: 
+				register-with-eureka: false
+				service-url: 
+				  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+				fetch-registry: false
