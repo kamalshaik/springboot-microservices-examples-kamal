@@ -1,5 +1,5 @@
 
-Start servers in below order [First build all project [clean install]]: 
+Start servers in below order [First build all projects [clean install]]: 
 - 1. EurekaServerPhotoAppDiscoveryService [9000]
 - 2. api-gateway-sp-cloud [9050]
 - 3. PhotoAppMgtService [9001]
@@ -33,8 +33,8 @@ Eureka server:
 ------------------------------------------------------------------------------------------------------------
 Service internal details:  
 
->**EurekaServerPhotoAppDiscoveryService:**     		
-	- @EnableEurekaServer    
+>**EurekaServerPhotoAppDiscoveryService:**    		
+  - @EnableEurekaServer  
 	- **application.yml:**  
 			- server:   
 				  port: 9000  
@@ -49,7 +49,7 @@ Service internal details:
 					service-url:   
 					  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka  
 					fetch-registry: false  
---
+------------
 					
 ------------------------------------------------------------------------------------------------------------
 
