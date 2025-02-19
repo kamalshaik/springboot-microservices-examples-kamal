@@ -1,5 +1,5 @@
 
-Start servers in below order: 
+Start servers in below order [First build all project [clean install]]: 
 - 1. EurekaServerPhotoAppDiscoveryService [9000]
 - 2. api-gateway-sp-cloud [9050]
 - 3. PhotoAppMgtService [9001]
