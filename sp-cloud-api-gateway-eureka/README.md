@@ -33,9 +33,9 @@ Eureka server:
 ------------------------------------------------------------------------------------------------------------
 Service internal details:  
 
->**EurekaServerPhotoAppDiscoveryService:**\
+**EurekaServerPhotoAppDiscoveryService:**\
 	- @EnableEurekaServer\
-	- **application.yml:**  
+	- >**application.yml:**  
 			- server:   
 				  port: 9000  
 				spring:   
