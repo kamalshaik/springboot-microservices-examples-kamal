@@ -1,14 +1,14 @@
 
 Start servers in below order: 
-	1. EurekaServerPhotoAppDiscoveryService [9000]
-	2. api-gateway-sp-cloud [9050]
-	3. PhotoAppMgtService [9001]
-	4. PhotoAppUserService [9002]
+- 1. EurekaServerPhotoAppDiscoveryService [9000]
+- 2. api-gateway-sp-cloud [9050]
+- 3. PhotoAppMgtService [9001]
+- 4. PhotoAppUserService [9002]
 ------------------------------------------------------------------------------------------------------------
 Open postman: 
-	send request: 
-		1. http://localhost:9050/mmt/display       ==> GET request
-		2. [optional] http://localhost:9050/users/display       ==> GET request
+- send request: 
+	- 1. http://localhost:9050/mmt/display       ==> GET request
+	- 2. [optional] http://localhost:9050/users/display       ==> GET request
 ------------------------------------------------------------------------------------------------------------
 Flow: 
 		Request sending to --> api-gateway-sp-cloud <--> PhotoAppMgtService <--> PhotoAppUserService
