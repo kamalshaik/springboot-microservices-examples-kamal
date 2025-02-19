@@ -27,6 +27,7 @@ Swagger:
 	
 ------------------------------------------------------------------------------------------------------------
 Service internal details:
+
 >EurekaServerPhotoAppDiscoveryService:		
 	- @EnableEurekaServer
 	- application.yml:
@@ -43,3 +44,15 @@ Service internal details:
 				service-url: 
 				  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
 				fetch-registry: false
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------				
