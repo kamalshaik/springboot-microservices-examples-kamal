@@ -28,22 +28,22 @@ Swagger:
 ------------------------------------------------------------------------------------------------------------
 Service internal details:
 
->EurekaServerPhotoAppDiscoveryService:		
-	- @EnableEurekaServer
-	- application.yml:
-		- server: 
-			  port: 9000
-			spring: 
-			  application: 
-				name: discoveryservice
-			eureka: 
-			  instance: 
-				hostname: localhost
-			  client: 
-				register-with-eureka: false
-				service-url: 
-				  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
-				fetch-registry: false
+>EurekaServerPhotoAppDiscoveryService:  		
+	- @EnableEurekaServer  
+	- application.yml:  
+		- server:   
+			  port: 9000  
+			spring:   
+			  application:   
+				name: discoveryservice  
+			eureka:   
+			  instance:   
+				hostname: localhost  
+			  client:   
+				register-with-eureka: false  
+				service-url:   
+				  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka  
+				fetch-registry: false  
 ------------------------------------------------------------------------------------------------------------
 
 
