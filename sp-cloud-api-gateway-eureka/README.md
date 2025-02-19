@@ -26,6 +26,11 @@ Swagger:
 - We can access Swagger using below URL: http://localhost:9002/swagger-ui.html
 	
 ------------------------------------------------------------------------------------------------------------
+Eureka server: 
+- "EurekaServerPhotoAppDiscoveryService [9000]" is Eureka configured service.
+- We can access Eureka using below URL: http://localhost:9000/
+	
+------------------------------------------------------------------------------------------------------------
 Service internal details:  
 
 >**EurekaServerPhotoAppDiscoveryService:**     		
@@ -44,6 +49,8 @@ Service internal details:
 					service-url:   
 					  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka  
 					fetch-registry: false  
+--
+					
 ------------------------------------------------------------------------------------------------------------
 
 
